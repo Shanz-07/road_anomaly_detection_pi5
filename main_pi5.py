@@ -10,7 +10,7 @@ import subprocess
 import sys
 
 MODEL_PATH="best_ncnn_model"
-SOURCE="videos/vid1.mp4"        #use picamera0 for rpicams or use a prerecorded video path
+SOURCE="videos/sample1.mp4"        #use picamera0 for rpicams or use a prerecorded video path
 CONF_THRESH= 0.4
 PRE_BUFFER_SECONDS= 2
 POST_BUFFER_SECONDS= 3
