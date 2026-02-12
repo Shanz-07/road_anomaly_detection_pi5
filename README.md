@@ -1,6 +1,6 @@
 # 🚗 Real-Time Road Anomaly Detection on Raspberry Pi 5 (Edge AI)  
 **Project for Bharat AI-SoC Student Challenge**  
-**Team:** Embedded Minds  
+**Name:** Mohd Nouman Ahmed  
 **Category:** ECE / Embedded AI  
 
 This repository implements a high-performance, CPU-optimized YOLO pipeline designed specifically for the ARM architecture of the Raspberry Pi 5. The system detects road anomalies (potholes, speed bumps, obstacles) in real-time, leveraging hardware-specific optimizations to ensure safety without the need for dedicated GPU hardware.
