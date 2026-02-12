@@ -40,8 +40,8 @@ We use a Producer-Consumer model. The main thread handles inference and maintain
 
 ## 🛠 Tech Stack  
 
-- **Hardware:** Raspberry Pi 5 (8GB), USB Webcam / PiCamera2  
-- **Inference:** Ultralytics YOLO → NCNN Export  
+- **Hardware:** Raspberry Pi 5 (8GB) with cooling fan, USB Webcam / PiCamera2  
+- **Inference:** Ultralytics YOLOv8n → NCNN Export  
 - **Optimization:** ARM NEON SIMD, FP16 Quantization  
 - **Processing:** OpenCV & FFmpeg (Subprocess-based encoding)  
 
@@ -62,19 +62,23 @@ We use a Producer-Consumer model. The main thread handles inference and maintain
 ⚙️ Installation & Usage
 Environment Setup
 
-python3 -m venv venv && source venv/bin/activate
+cd road_anomaly_detection_pi5
+python3 -m venv venv 
+source venv/bin/activate
 pip install --upgrade pip setuptools wheel
 pip install ultralytics opencv-python
-sudo apt update && sudo apt install -y ffmpeg
+sudo apt update 
+sudo apt install -y ffmpeg
 
-Run Pipeline
+Run Pipeline:
 
 python3 main_pi5.py
 
 📈 Performance Benchmarks (Raspberry Pi 5)
-Backend	Precision	FPS (Avg)	Latency
-PyTorch (Stock)	FP32	~2–3 FPS	High
-NCNN (Optimized)	FP16	12–18 FPS	Low
+Backend	Precision	    FPS (Avg)	    Latency
+PyTorch (Stock)	FP32	~2–3 FPS	    High
+NCNN (Optimized)FP16	 9-10 FPS	    Low
+
 🔎 Deliverables & Evidence
 
     anomaly_log.csv: Contains timestamped evidence of every detection event.
@@ -86,5 +90,3 @@ NCNN (Optimized)	FP16	12–18 FPS	Low
 Mohd Nouman Ahmed
 ECE / Embedded AI Developer
 Developed for the Bharat AI-SoC Student Challenge 2026
-
-yaml
